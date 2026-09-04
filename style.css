@@ -1,0 +1,2935 @@
+/* ==============================
+   GENERAL SETTINGS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #2e7d32,
+        #66bb6a
+    );
+}
+
+
+/* ==============================
+   LOGIN CONTAINER
+   ============================== */
+
+.login-container {
+    width: 400px;
+    max-width: 90%;
+
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==============================
+   LOGO
+   ============================== */
+
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.logo h1 {
+    color: #2e7d32;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.logo p {
+    color: #666666;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #333333;
+
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2e7d32;
+
+    box-shadow:
+        0 0 4px rgba(46, 125, 50, 0.3);
+}
+
+
+/* ==============================
+   PASSWORD
+   ============================== */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 65px;
+}
+
+#showPasswordBtn {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#showPasswordBtn:hover {
+    color: #1b5e20;
+}
+
+
+/* ==============================
+   FORGOT PASSWORD
+   ============================== */
+
+.forgot-password {
+    text-align: right;
+
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #2e7d32;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   LOGIN BUTTON
+   ============================== */
+
+.login-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #2e7d32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #1b5e20;
+}
+
+
+/* ==============================
+   MESSAGE
+   ============================== */
+
+.message {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+}
+
+.message.error {
+    color: #d32f2f;
+}
+
+.message.success {
+    color: #2e7d32;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.login-footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 500px) {
+
+    .login-container {
+        padding: 25px;
+    }
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .logo-icon {
+        font-size: 42px;
+    }
+}
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: #1b5e20;
+
+    color: white;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* Sidebar Header */
+
+.sidebar-header {
+    text-align: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-header .logo-icon {
+    font-size: 42px;
+
+    margin-bottom: 8px;
+}
+
+.sidebar-header h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.sidebar-header p {
+    font-size: 12px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navigation {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.nav-link {
+    display: block;
+
+    padding: 13px 15px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #2e7d32;
+}
+
+.nav-link.active {
+    background-color: #66bb6a;
+
+    color: white;
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+   ========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.logout-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #c62828;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 25px 35px;
+
+    background-color: #f4f6f5;
+
+    color: #333;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.top-bar {
+    background-color: white;
+
+    padding: 20px 25px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar h1 {
+    font-size: 27px;
+
+    color: #1b5e20;
+
+    margin-bottom: 5px;
+}
+
+.top-bar p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   USER INFORMATION
+   ========================================= */
+
+.user-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.user-info > span {
+    font-size: 30px;
+}
+
+.user-info strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.user-info small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+   ========================================= */
+
+.welcome-section {
+    background: linear-gradient(
+        135deg,
+        #2e7d32,
+        #66bb6a
+    );
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-width: 700px;
+}
+
+
+/* =========================================
+   DASHBOARD STATISTICS CARDS
+   ========================================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #e8f5e9;
+
+    border-radius: 10px;
+
+    font-size: 27px;
+}
+
+.card-content h3 {
+    font-size: 14px;
+
+    color: #555;
+
+    margin-bottom: 5px;
+}
+
+.card-number {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #2e7d32;
+
+    margin-bottom: 3px;
+}
+
+.card-content span {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   DASHBOARD SECTION
+   ========================================= */
+
+.dashboard-section {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #1b5e20;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+   ========================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.action-card {
+    padding: 20px;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    transition: 0.3s;
+}
+
+.action-card:hover {
+    border-color: #66bb6a;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.action-icon {
+    font-size: 30px;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+.action-card h3 {
+    font-size: 15px;
+
+    color: #2e7d32;
+
+    margin-bottom: 8px;
+}
+
+.action-card p {
+    font-size: 12px;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ACTIVITY TABLE
+   ========================================= */
+
+.activity-table {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.activity-table table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.activity-table th {
+    background-color: #f1f8f2;
+
+    color: #1b5e20;
+
+    text-align: left;
+
+    padding: 13px;
+
+    font-size: 13px;
+}
+
+.activity-table td {
+    padding: 13px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+}
+
+.status.pending {
+    background-color: #fff3cd;
+
+    color: #856404;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.dashboard-footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   DASHBOARD RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* Tablets */
+
+@media (max-width: 1100px) {
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .quick-actions {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* Smaller tablets */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+
+        padding: 20px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* Mobile phones */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .sidebar-header {
+        padding-bottom: 15px;
+    }
+
+    .navigation {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 15px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-section h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================
+   FOOD HYGIENE ASSESSMENT
+   ========================================= */
+
+
+/* =========================================
+   ASSESSMENT QUESTIONS
+   ========================================= */
+
+.assessment-question {
+    background-color: #f8faf8;
+
+    border: 1px solid #e0e0e0;
+
+    border-left: 4px solid #2e7d32;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+.assessment-question:hover {
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    border-left-color: #66bb6a;
+}
+
+
+/* Question heading */
+
+.assessment-question h3 {
+    color: #333333;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   ANSWER OPTIONS
+   ========================================= */
+
+.assessment-question label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-right: 25px;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.assessment-question label:hover {
+    background-color: #e8f5e9;
+
+    color: #2e7d32;
+}
+
+
+/* Radio buttons */
+
+.assessment-question input[type="radio"] {
+    width: 17px;
+
+    height: 17px;
+
+    accent-color: #2e7d32;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ASSESSMENT BUTTONS
+   ========================================= */
+
+.assessment-actions {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* Calculate button */
+
+.assessment-actions .login-btn {
+    flex: 1;
+
+    border-radius: 6px;
+}
+
+
+/* Reset button */
+
+.reset-btn {
+    padding: 13px 25px;
+
+    border: 1px solid #999999;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #eeeeee;
+
+    border-color: #777777;
+}
+
+
+/* =========================================
+   ASSESSMENT RESULT
+   ========================================= */
+
+.assessment-result {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    background-color: #e8f5e9;
+
+    border: 1px solid #a5d6a7;
+}
+
+.assessment-result h3 {
+    color: #1b5e20;
+
+    margin-bottom: 10px;
+}
+
+.assessment-result p {
+    color: #444444;
+
+    margin: 5px 0;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESULT LEVELS
+   ========================================= */
+
+.assessment-result.good {
+    background-color: #e8f5e9;
+
+    border-color: #81c784;
+}
+
+.assessment-result.moderate {
+    background-color: #fff8e1;
+
+    border-color: #ffcc80;
+}
+
+.assessment-result.poor {
+    background-color: #ffebee;
+
+    border-color: #ef9a9a;
+}
+
+
+/* =========================================
+   ASSESSMENT FORM
+   ========================================= */
+
+#assessmentForm {
+    width: 100%;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* Tablets */
+
+@media (max-width: 800px) {
+
+    .assessment-question label {
+        display: flex;
+
+        width: 100%;
+
+        margin-right: 0;
+
+        margin-bottom: 5px;
+    }
+
+}
+
+
+/* Mobile phones */
+
+@media (max-width: 600px) {
+
+    .assessment-question {
+        padding: 15px;
+    }
+
+    .assessment-question h3 {
+        font-size: 14px;
+    }
+
+    .assessment-actions {
+        flex-direction: column;
+    }
+
+    .assessment-actions .login-btn,
+    .reset-btn {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   ASSESSMENT DESCRIPTION
+   ========================================= */
+
+.criterion-description {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   FOOD HYGIENE SIMULATION
+   ========================================= */
+
+
+/* =========================================
+   SIMULATION CONTROL CONTAINER
+   ========================================= */
+
+.simulation-control {
+    background-color: #f8faf8;
+
+    border: 1px solid #e0e0e0;
+
+    border-left: 4px solid #2e7d32;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.simulation-control:hover {
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    border-left-color: #66bb6a;
+}
+
+
+/* =========================================
+   SIMULATION LABEL
+   ========================================= */
+
+.simulation-control label {
+    display: block;
+
+    color: #333333;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   SIMULATION SELECT
+   ========================================= */
+
+.simulation-control select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #444444;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Select focus */
+
+.simulation-control select:focus {
+    border-color: #2e7d32;
+
+    box-shadow:
+        0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+
+/* =========================================
+   SIMULATION ACTIONS
+   ========================================= */
+
+.simulation-actions {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* Run simulation button */
+
+.simulation-actions .login-btn {
+    flex: 1;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   SIMULATION RESULT
+   ========================================= */
+
+.simulation-result {
+    display: none;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   RESULT HEADER
+   ========================================= */
+
+.result-header {
+    border-bottom: 1px solid #eeeeee;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 20px;
+}
+
+.result-header h2 {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   RESULT CONTENT
+   ========================================= */
+
+.simulation-result-content {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   RISK INDICATOR
+   ========================================= */
+
+.risk-indicator {
+    text-align: center;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+}
+
+.risk-indicator span {
+    display: block;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.risk-indicator h3 {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   RISK SCORE
+   ========================================= */
+
+.risk-score {
+    text-align: center;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+}
+
+.risk-score p {
+    margin: 0 0 8px;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+.risk-score strong {
+    display: block;
+
+    color: #2e7d32;
+
+    font-size: 38px;
+}
+
+
+/* =========================================
+   RISK DESCRIPTION
+   ========================================= */
+
+.risk-description {
+    grid-column: 1 / -1;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    background-color: #f8faf8;
+
+    border-left: 4px solid #2e7d32;
+}
+
+.risk-description p {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   RECOMMENDATIONS
+   ========================================= */
+
+.recommendations {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    background-color: #f8faf8;
+
+    border: 1px solid #e5e5e5;
+}
+
+.recommendations h3 {
+    margin-top: 0;
+
+    color: #333333;
+}
+
+.recommendations ul {
+    padding-left: 20px;
+
+    margin-bottom: 0;
+}
+
+.recommendations li {
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   RISK LEVEL STYLES
+   ========================================= */
+
+/* Low Risk */
+
+.simulation-result.low-risk {
+    border-left: 5px solid #2e7d32;
+}
+
+.simulation-result.low-risk
+.risk-indicator {
+    background-color: #e8f5e9;
+}
+
+.simulation-result.low-risk
+.risk-indicator h3 {
+    color: #2e7d32;
+}
+
+
+/* Moderate Risk */
+
+.simulation-result.moderate-risk {
+    border-left: 5px solid #f9a825;
+}
+
+.simulation-result.moderate-risk
+.risk-indicator {
+    background-color: #fff8e1;
+}
+
+.simulation-result.moderate-risk
+.risk-indicator h3 {
+    color: #f57f17;
+}
+
+
+/* High Risk */
+
+.simulation-result.high-risk {
+    border-left: 5px solid #c62828;
+}
+
+.simulation-result.high-risk
+.risk-indicator {
+    background-color: #ffebee;
+}
+
+.simulation-result.high-risk
+.risk-indicator h3 {
+    color: #c62828;
+}
+
+
+/* =========================================
+   SIMULATION FORM
+   ========================================= */
+
+#simulationForm {
+    width: 100%;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* Tablets */
+
+@media (max-width: 800px) {
+
+    .simulation-result-content {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-description {
+        grid-column: auto;
+    }
+
+}
+
+
+/* Mobile phones */
+
+@media (max-width: 600px) {
+
+    .simulation-control {
+        padding: 15px;
+    }
+
+    .simulation-control label {
+        font-size: 14px;
+    }
+
+    .simulation-control select {
+        font-size: 13px;
+
+        padding: 11px;
+    }
+
+    .simulation-actions {
+        flex-direction: column;
+    }
+
+    .simulation-actions .login-btn,
+    .simulation-actions .reset-btn {
+        width: 100%;
+    }
+
+    .simulation-result {
+        padding: 15px;
+    }
+
+    .risk-score strong {
+        font-size: 32px;
+    }
+
+}
+
+/* =========================================
+   FOOD HYGIENE RESULTS PAGE
+   ========================================= */
+
+/* Container & Header Setup */
+.results-container {
+    padding: 25px 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.results-header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.results-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.results-header p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* Common Section Layout */
+.score-card,
+.summary-section,
+.hygiene-section,
+.recommendation-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.score-card h3,
+.summary-section h3,
+.hygiene-section h3,
+.recommendation-section h3 {
+    color: #1b5e20;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Score Card & Circular Indicator */
+.score-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#e0e0e0 0deg, #e0e0e0 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 20px;
+    position: relative;
+}
+
+.score-circle::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.score-circle span {
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+#performance {
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#scoreMessage {
+    color: #666666;
+    font-size: 14px;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* Grid Displays (Summary & Hygiene Performance) */
+.summary-grid,
+.hygiene-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.summary-card,
+.hygiene-card {
+    background-color: #f8faf8;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #2e7d32;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.summary-card:hover,
+.hygiene-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left-color: #66bb6a;
+}
+
+.summary-card h4,
+.hygiene-card h4 {
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.summary-card p,
+.hygiene-card p {
+    color: #2e7d32;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Recommendation Dynamic List Items */
+#recommendations {
+    background-color: #f8faf8;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#recommendations p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.recommendation-item {
+    padding: 12px 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #2e7d32;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.recommendation-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Action Buttons */
+.result-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.result-actions button {
+    flex: 1;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#retryBtn {
+    background-color: #2e7d32;
+    color: white;
+}
+
+#retryBtn:hover {
+    background-color: #1b5e20;
+}
+
+#assessmentBtn,
+#dashboardBtn {
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #999999;
+}
+
+#assessmentBtn:hover,
+#dashboardBtn:hover {
+    background-color: #eeeeee;
+    border-color: #777777;
+}
+
+/* Navbar Adjustment for Standalone Headers */
+.header {
+    background-color: #1b5e20;
+    color: white;
+    padding: 15px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #66bb6a;
+}
+
+.navbar #logoutBtn {
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN FOR RESULTS
+   ========================================= */
+@media (max-width: 1100px) {
+    .summary-grid,
+    .hygiene-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .results-container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .summary-grid,
+    .hygiene-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+    .result-actions button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   FOOD HYGIENE MANAGEMENT SYSTEM
+   REPORTS PAGE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   REPORTS CONTAINER
+   ========================================================= */
+
+.reports-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* =========================================================
+   REPORTS HEADER
+   ========================================================= */
+
+.reports-header {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reports-header h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.reports-header p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   REPORT INFORMATION
+   ========================================================= */
+
+.report-information {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.report-information h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   REPORT INFORMATION GRID
+   ========================================================= */
+
+.report-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================================
+   INFORMATION CARDS
+   ========================================================= */
+
+.info-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+}
+
+.info-card h4 {
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+.info-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   OVERALL PERFORMANCE
+   ========================================================= */
+
+.report-performance {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.report-performance h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   PERFORMANCE GRID
+   ========================================================= */
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PERFORMANCE CARDS
+   ========================================================= */
+
+.performance-card {
+    background: #f8f9fa;
+    padding: 25px 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
+.performance-card h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.performance-card strong {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.performance-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ASSESSMENT REPORT
+   ========================================================= */
+
+.assessment-report {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.assessment-report h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   ASSESSMENT GRID
+   ========================================================= */
+
+.assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ASSESSMENT CARDS
+   ========================================================= */
+
+.assessment-card {
+    background: #f8f9fa;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
+.assessment-card h4 {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.assessment-card p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HYGIENE REPORT
+   ========================================================= */
+
+.hygiene-report {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hygiene-report h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   HYGIENE REPORT GRID
+   ========================================================= */
+
+.hygiene-report-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================================
+   HYGIENE REPORT CARDS
+   ========================================================= */
+
+.hygiene-report-card {
+    background: #f8f9fa;
+    padding: 25px 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
+.hygiene-report-card h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.hygiene-report-card strong {
+    font-size: 30px;
+    display: block;
+}
+
+
+/* =========================================================
+   RISK FACTORS
+   ========================================================= */
+
+.report-risk-factors {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.report-risk-factors h3 {
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+#reportRiskFactors {
+    margin: 0;
+    padding-left: 25px;
+}
+
+#reportRiskFactors li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RECOMMENDATIONS
+   ========================================================= */
+
+.report-recommendations {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.report-recommendations h3 {
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   RECOMMENDATION ITEMS
+   ========================================================= */
+
+#reportRecommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.report-recommendation-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #555;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FINAL REPORT SUMMARY
+   ========================================================= */
+
+.final-report-summary {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.final-report-summary h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+#finalReportSummary {
+    margin: 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* =========================================================
+   REPORT ACTIONS
+   ========================================================= */
+
+.report-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.report-actions button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.report-actions button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   REPORT STATUS
+   ========================================================= */
+
+#assessmentStatus {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   RISK LEVEL STYLING
+   ========================================================= */
+
+.low-risk {
+    border-left: 6px solid #2e7d32;
+}
+
+.moderate-risk {
+    border-left: 6px solid #f9a825;
+}
+
+.high-risk {
+    border-left: 6px solid #c62828;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .reports-container {
+        padding: 20px;
+    }
+
+    .report-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .performance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .assessment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hygiene-report-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .reports-container {
+        padding: 15px;
+    }
+
+    .reports-header {
+        padding: 20px;
+    }
+
+    .reports-header h2 {
+        font-size: 23px;
+    }
+
+    .report-information,
+    .report-performance,
+    .assessment-report,
+    .hygiene-report,
+    .report-risk-factors,
+    .report-recommendations,
+    .final-report-summary {
+        padding: 20px;
+    }
+
+    .report-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .assessment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hygiene-report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .report-actions {
+        flex-direction: column;
+    }
+
+    .report-actions button {
+        width: 100%;
+    }
+
+}
+
+/* =========================================================
+   FOOD HYGIENE MANAGEMENT SYSTEM
+   PROFILE PAGE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   PROFILE CONTAINER
+   ========================================================= */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #ffffff;
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   PROFILE AVATAR
+   ========================================================= */
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #f1f3f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    border: 2px solid #dddddd;
+}
+
+
+/* =========================================================
+   PROFILE TITLE
+   ========================================================= */
+
+.profile-title h2 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+}
+
+.profile-title p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PROFILE SECTION
+   ========================================================= */
+
+.profile-section {
+    background: #ffffff;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+.section-title h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+}
+
+.section-title p {
+    margin: 0;
+
+    color: #666666;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROFILE GRID
+   ========================================================= */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PROFILE FIELD
+   ========================================================= */
+
+.profile-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   PROFILE LABEL
+   ========================================================= */
+
+.profile-field label {
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PROFILE INPUT
+   ========================================================= */
+
+.profile-field input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+
+    background: #f8f9fa;
+
+    outline: none;
+}
+
+
+/* Editable input */
+
+.profile-field input.editable {
+    background: #ffffff;
+
+    border-color: #999999;
+}
+
+
+/* =========================================================
+   PROFILE ACTIONS
+   ========================================================= */
+
+.profile-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.profile-actions button,
+.security-actions button,
+.password-actions button {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+.profile-actions button:hover,
+.security-actions button:hover,
+.password-actions button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   ACCOUNT GRID
+   ========================================================= */
+
+.account-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ACCOUNT CARD
+   ========================================================= */
+
+.account-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #f8f9fa;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   ACCOUNT ICON
+   ========================================================= */
+
+.account-icon {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   ACCOUNT CARD TEXT
+   ========================================================= */
+
+.account-card h4 {
+    margin: 0 0 6px;
+
+    font-size: 15px;
+}
+
+.account-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ACTIVITY GRID
+   ========================================================= */
+
+.activity-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ACTIVITY CARD
+   ========================================================= */
+
+.activity-card {
+    background: #f8f9fa;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   ACTIVITY CARD HEADING
+   ========================================================= */
+
+.activity-card h4 {
+    margin: 0 0 15px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ACTIVITY NUMBER
+   ========================================================= */
+
+.activity-card strong {
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.security-actions {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   PASSWORD SECTION
+   ========================================================= */
+
+.password-section {
+    background: #ffffff;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.password-section h3 {
+    margin: 0 0 25px;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   PASSWORD FORM
+   ========================================================= */
+
+#passwordForm {
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   PASSWORD FIELD
+   ========================================================= */
+
+.password-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.password-field label {
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+   ========================================================= */
+
+.password-field input {
+    padding: 12px 14px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.password-field input:focus {
+    border-color: #888888;
+}
+
+
+/* =========================================================
+   PASSWORD ACTIONS
+   ========================================================= */
+
+.password-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   PROFILE NOTE
+   ========================================================= */
+
+.profile-note {
+    background: #ffffff;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.profile-note p {
+    margin: 0;
+
+    color: #666666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .profile-container {
+        padding: 20px;
+    }
+
+
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .account-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .activity-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .profile-container {
+        padding: 15px;
+    }
+
+
+    /* Profile header */
+
+    .profile-header {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px;
+    }
+
+
+    .profile-avatar {
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 35px;
+    }
+
+
+    .profile-title h2 {
+        font-size: 23px;
+    }
+
+
+    /* Profile fields */
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Account cards */
+
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Activity cards */
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Sections */
+
+    .profile-section,
+    .password-section {
+        padding: 20px;
+    }
+
+
+    /* Buttons */
+
+    .profile-actions,
+    .security-actions,
+    .password-actions {
+        flex-direction: column;
+    }
+
+
+    .profile-actions button,
+    .security-actions button,
+    .password-actions button {
+        width: 100%;
+    }
+
+}
