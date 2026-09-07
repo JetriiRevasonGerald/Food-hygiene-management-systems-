@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Food Hygiene System</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+         ========================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">🍽️</div>
+
+            <h2>Food Hygiene</h2>
+
+            <p>Management System</p>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-link active">
+                🏠 Dashboard
+            </a>
+
+            <a href="assessment.html" class="nav-link">
+                📝 Assessment
+            </a>
+
+            <a href="simulation.html" class="nav-link">
+                🧪 Simulation
+            </a>
+
+            <a href="results.html" class="nav-link">
+                📊 Results
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                📄 Reports
+            </a>
+
+            <a href="profile.html" class="nav-link">
+                👤 Profile
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome to the Food Hygiene Management System
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>Food Hygiene Officer</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             WELCOME SECTION
+             ========================= -->
+
+        <section class="welcome-section">
+
+            <h2>Welcome to Food Hygiene System</h2>
+
+            <p>
+                Monitor food hygiene practices, conduct assessments,
+                perform simulations and generate reports.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             STATISTICS
+             ========================= -->
+
+        <section class="dashboard-cards">
+
+
+            <!-- Assessment Card -->
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📝
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Assessments</h3>
+
+                    <p class="card-number">0</p>
+
+                    <span>Total assessments</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Simulations Card -->
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    🧪
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Simulations</h3>
+
+                    <p class="card-number">0</p>
+
+                    <span>Completed simulations</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Results Card -->
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Results</h3>
+
+                    <p class="card-number">0</p>
+
+                    <span>Available results</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Reports Card -->
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📄
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Reports</h3>
+
+                    <p class="card-number">0</p>
+
+                    <span>Generated reports</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUICK ACTIONS
+             ========================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Quick Actions</h2>
+
+                <p>Start working with the system</p>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <a href="assessment.html" class="action-card">
+
+                    <span class="action-icon">📝</span>
+
+                    <h3>Start Assessment</h3>
+
+                    <p>
+                        Evaluate food hygiene practices.
+                    </p>
+
+                </a>
+
+
+
+                <a href="simulation.html" class="action-card">
+
+                    <span class="action-icon">🧪</span>
+
+                    <h3>Run Simulation</h3>
+
+                    <p>
+                        Simulate food hygiene conditions.
+                    </p>
+
+                </a>
+
+
+
+                <a href="results.html" class="action-card">
+
+                    <span class="action-icon">📊</span>
+
+                    <h3>View Results</h3>
+
+                    <p>
+                        View assessment and simulation results.
+                    </p>
+
+                </a>
+
+
+
+                <a href="reports.html" class="action-card">
+
+                    <span class="action-icon">📄</span>
+
+                    <h3>Generate Report</h3>
+
+                    <p>
+                        Create food hygiene reports.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECENT ACTIVITY
+             ========================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Recent Activity</h2>
+
+                <p>Your latest system activities</p>
+
+            </div>
+
+
+            <div class="activity-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Activity</th>
+
+                            <th>Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>No activities available</td>
+
+                            <td>-</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Food Hygiene Management System
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- External JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
