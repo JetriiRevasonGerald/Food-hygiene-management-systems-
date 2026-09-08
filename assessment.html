@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hygiene Assessment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">🍽️</div>
+
+            <h2>Food Hygiene</h2>
+
+            <p>Management System</p>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-link">
+                🏠 Dashboard
+            </a>
+
+            <a href="assessment.html" class="nav-link active">
+                📝 Assessment
+            </a>
+
+            <a href="simulation.html" class="nav-link">
+                🧪 Simulation
+            </a>
+
+            <a href="results.html" class="nav-link">
+                📊 Results
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                📄 Reports
+            </a>
+
+            <a href="profile.html" class="nav-link">
+                👤 Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <div>
+
+                <h1>Food Hygiene Assessment</h1>
+
+                <p>
+                    Food hygiene compliance assessment
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>Food Hygiene Officer</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             INTRODUCTION
+             ========================================= -->
+
+        <section class="welcome-section">
+
+            <h2>Food Hygiene Compliance Assessment</h2>
+
+            <p>
+                Assess food hygiene practices against the
+                selected hygiene requirements. Mark each
+                applicable criterion as compliant,
+                non-compliant, or not applicable.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ASSESSMENT FORM
+             ========================================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Assessment Criteria</h2>
+
+                <p>
+                    Select one response for each criterion.
+                </p>
+
+            </div>
+
+
+            <form id="assessmentForm">
+
+
+                <!-- =====================================
+                     QUESTION 1
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        1. Personal Hygiene
+                    </h3>
+
+                    <p class="criterion-description">
+                        Do food handlers maintain appropriate
+                        personal cleanliness and hygienic
+                        appearance while handling food?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q1"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 2
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        2. Hand Hygiene
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are hands washed appropriately with
+                        clean water and soap before and during
+                        food handling when required?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q2"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 3
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        3. Food Storage
+                    </h3>
+
+                    <p class="criterion-description">
+                        Is food stored under appropriate
+                        hygienic and temperature conditions?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q3"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 4
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        4. Prevention of Cross-Contamination
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are raw foods appropriately separated
+                        from cooked or ready-to-eat foods?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q4"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q4"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q4"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 5
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        5. Cleaning and Sanitation
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are food-contact surfaces, utensils
+                        and equipment properly cleaned and
+                        maintained?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q5"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q5"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q5"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 6
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        6. Water and Washing Facilities
+                    </h3>
+
+                    <p class="criterion-description">
+                        Is adequate safe water and appropriate
+                        washing facilities available for food
+                        hygiene activities?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q6"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q6"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q6"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 7
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        7. Waste Management
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are food waste and other waste materials
+                        appropriately collected, handled and
+                        disposed of?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q7"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q7"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q7"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 8
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        8. Pest Control
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are food premises protected against
+                        insects, rodents and other pests?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q8"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q8"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q8"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 9
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        9. Food Premises and Environment
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are food preparation areas, facilities
+                        and surrounding environments maintained
+                        in hygienic conditions?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q9"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q9"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q9"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     QUESTION 10
+                     ===================================== -->
+
+                <div class="assessment-question">
+
+                    <h3>
+                        10. Safe Food Handling Practices
+                    </h3>
+
+                    <p class="criterion-description">
+                        Are food handlers following appropriate
+                        procedures to prevent contamination of food?
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q10"
+                            value="1"
+                            required
+                        >
+
+                        Compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q10"
+                            value="0"
+                        >
+
+                        Non-compliant
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="q10"
+                            value="na"
+                        >
+
+                        Not Applicable
+                    </label>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     BUTTONS
+                     ===================================== -->
+
+                <div class="assessment-actions">
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        Calculate Compliance
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="reset-btn"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div
+                    id="assessmentResult"
+                    class="assessment-result"
+                ></div>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Food Hygiene Management System
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- External JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
