@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hygiene Simulation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simulete.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">🍽️</div>
+
+            <h2>Food Hygiene</h2>
+
+            <p>Management System</p>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-link">
+                🏠 Dashboard
+            </a>
+
+            <a href="assessment.html" class="nav-link">
+                📝 Assessment
+            </a>
+
+            <a href="simulation.html" class="nav-link active">
+                🧪 Simulation
+            </a>
+
+            <a href="results.html" class="nav-link">
+                📊 Results
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                📄 Reports
+            </a>
+
+            <a href="profile.html" class="nav-link">
+                👤 Profile
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =========================================
+             TOP BAR
+             ========================================= -->
+
+        <!--<header class="top-bar">
+
+            <div>
+
+                <h1>Food Hygiene Simulation</h1>
+
+                <p>
+                    Simulate food safety and hygiene conditions
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>Food Hygiene Officer</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+         =========================================
+             INTRODUCTION
+             ========================================= 
+
+        <section class="welcome-section">
+
+            <h2>Food Hygiene Risk Simulation</h2>
+
+            <p>
+                Select different food hygiene conditions
+                to simulate their possible effect on food
+                safety risk.
+            </p>
+
+        </section>
+
+
+
+         =========================================
+             SIMULATION FORM
+             ========================================= 
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Simulation Parameters</h2>
+
+                <p>
+                    Select the conditions that represent
+                    the simulated food handling environment.
+                </p>
+
+            </div>
+
+
+            <form id="simulationForm">
+
+
+                 TEMPERATURE
+
+                <div class="simulation-control">
+
+                    <label for="temperature">
+                        🌡️ Food Storage Temperature
+                    </label>
+
+                    <select
+                        id="temperature"
+                        name="temperature"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Temperature Condition --
+                        </option>
+
+                        <option value="safe">
+                            Safe temperature condition
+                        </option>
+
+                        <option value="moderate">
+                            Moderate temperature condition
+                        </option>
+
+                        <option value="unsafe">
+                            Unsafe temperature condition
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 HAND HYGIENE 
+
+                <div class="simulation-control">
+
+                    <label for="handHygiene">
+                        🧼 Hand Hygiene
+                    </label>
+
+                    <select
+                        id="handHygiene"
+                        name="handHygiene"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Hand Hygiene Condition --
+                        </option>
+
+                        <option value="good">
+                            Proper hand hygiene
+                        </option>
+
+                        <option value="poor">
+                            Poor hand hygiene
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 CROSS CONTAMINATION 
+
+                <div class="simulation-control">
+
+                    <label for="crossContamination">
+                        🥩 Cross-Contamination
+                    </label>
+
+                    <select
+                        id="crossContamination"
+                        name="crossContamination"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Condition --
+                        </option>
+
+                        <option value="controlled">
+                            Cross-contamination controlled
+                        </option>
+
+                        <option value="possible">
+                            Possible cross-contamination
+                        </option>
+
+                        <option value="high">
+                            High cross-contamination risk
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 WATER QUALITY 
+
+                <div class="simulation-control">
+
+                    <label for="waterQuality">
+                        💧 Water Quality
+                    </label>
+
+                    <select
+                        id="waterQuality"
+                        name="waterQuality"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Water Condition --
+                        </option>
+
+                        <option value="safe">
+                            Safe water condition
+                        </option>
+
+                        <option value="uncertain">
+                            Uncertain water condition
+                        </option>
+
+                        <option value="unsafe">
+                            Unsafe water condition
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 CLEANING 
+
+                <div class="simulation-control">
+
+                    <label for="cleaning">
+                        🧹 Cleaning and Sanitation
+                    </label>
+
+                    <select
+                        id="cleaning"
+                        name="cleaning"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Cleaning Condition --
+                        </option>
+
+                        <option value="good">
+                            Good cleaning and sanitation
+                        </option>
+
+                        <option value="moderate">
+                            Moderate cleaning and sanitation
+                        </option>
+
+                        <option value="poor">
+                            Poor cleaning and sanitation
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 PEST CONTROL 
+
+                <div class="simulation-control">
+
+                    <label for="pestControl">
+                        🪳 Pest Control
+                    </label>
+
+                    <select
+                        id="pestControl"
+                        name="pestControl"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Pest Condition --
+                        </option>
+
+                        <option value="controlled">
+                            Pest control is effective
+                        </option>
+
+                        <option value="possible">
+                            Possible pest presence
+                        </option>
+
+                        <option value="present">
+                            Pest presence detected
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 WASTE MANAGEMENT 
+
+                <div class="simulation-control">
+
+                    <label for="wasteManagement">
+                        🗑️ Waste Management
+                    </label>
+
+                    <select
+                        id="wasteManagement"
+                        name="wasteManagement"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Waste Condition --
+                        </option>
+
+                        <option value="good">
+                            Proper waste management
+                        </option>
+
+                        <option value="moderate">
+                            Moderate waste management
+                        </option>
+
+                        <option value="poor">
+                            Poor waste management
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 FOOD HANDLING 
+
+                <div class="simulation-control">
+
+                    <label for="foodHandling">
+                        🍱 Food Handling Practice
+                    </label>
+
+                    <select
+                        id="foodHandling"
+                        name="foodHandling"
+                        required
+                    >
+
+                        <option value="">
+                            -- Select Food Handling Condition --
+                        </option>
+
+                        <option value="safe">
+                            Safe food handling
+                        </option>
+
+                        <option value="moderate">
+                            Moderate food handling
+                        </option>
+
+                        <option value="unsafe">
+                            Unsafe food handling
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                 SIMULATION BUTTONS 
+
+                <div class="simulation-actions">
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        🧪 Run Simulation
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="reset-btn"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+
+         =========================================
+             SIMULATION RESULT
+             ========================================= 
+
+        <section
+            id="simulationResult"
+            class="simulation-result"
+        >
+
+            <div class="result-header">
+
+                <h2>Simulation Result</h2>
+
+            </div>
+
+
+            <div class="simulation-result-content">
+
+
+                 RISK INDICATOR 
+
+                <div class="risk-indicator">
+
+                    <span id="riskIcon">
+                        ⚠️
+                    </span>
+
+                    <h3 id="riskLevel">
+                        Awaiting Simulation
+                    </h3>
+
+                </div>
+
+
+
+                 RISK SCORE 
+
+                <div class="risk-score">
+
+                    <p>
+                        Risk Score
+                    </p>
+
+                    <strong id="riskScore">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                 HYGIENE SCORE 
+
+                <div class="risk-score">
+
+                    <p>
+                        Hygiene Score
+                    </p>
+
+                    <strong id="hygieneScore">
+                        --
+                    </strong>
+
+                </div>
+
+
+
+                 DESCRIPTION 
+
+                <div class="risk-description">
+
+                    <p id="riskDescription">
+
+                        Select the simulation parameters
+                        and click "Run Simulation".
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+             =====================================
+                 RISK FACTORS
+                 ===================================== 
+
+            <div class="recommendations">
+
+                <h3>
+                    Identified Risk Factors
+                </h3>
+
+                <ul id="riskFactors">
+
+                    <li>
+                        Complete the simulation to identify
+                        risk factors.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+             =====================================
+                 RECOMMENDATIONS
+                 ===================================== 
+
+            <div class="recommendations">
+
+                <h3>
+                    Recommended Actions
+                </h3>
+
+                <ul id="recommendationList">
+
+                    <li>
+                        Complete the simulation to receive
+                        recommendations.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+             =====================================
+                 VIEW DETAILED RESULTS
+                 ===================================== 
+
+            <div class="simulation-actions">
+
+                <button
+                    type="button"
+                    id="viewResultsBtn"
+                    class="login-btn"
+                    style="display: none;"
+                >
+                    📊 View Detailed Results
+                </button>
+
+            </div>
+
+        </section>-->
+        <!-- =========================================
+     FOOD HYGIENE PRACTICALS
+     ========================================= -->
+
+<section class="welcome-section">
+    <h2>Food Hygiene Practical Simulations</h2>
+
+    <p>
+        Select a practical activity below to simulate
+        food hygiene conditions and evaluate the
+        possible food safety risks.
+    </p>
+</section>
+
+
+<!-- =========================================
+     PRACTICAL SELECTION
+     ========================================= -->
+
+<section class="practical-selection">
+
+    <h2>Choose Practical Activity</h2>
+
+    <div class="practical-grid">
+
+        <!-- =====================================
+             PRACTICAL 1
+             ===================================== -->
+
+        <div class="practical-card">
+
+            <div class="practical-icon">
+                🧪
+            </div>
+
+            <h3>Practical 1</h3>
+
+            <h4>Basic Food Hygiene</h4>
+
+            <p>
+                Simulate basic food hygiene conditions
+                including temperature, hand hygiene,
+                cleaning, water quality and waste
+                management.
+            </p>
+
+            <button
+                type="button"
+                class="practical-btn"
+                id="practical1Btn"
+            >
+                Start Practical 1
+            </button>
+
+        </div>
+
+
+        <!-- =====================================
+             PRACTICAL 2
+             ===================================== -->
+
+        <div class="practical-card">
+
+            <div class="practical-icon">
+                🔬
+            </div>
+
+            <h3>Practical 2</h3>
+
+            <h4>Food Handling & Contamination Prevention</h4>
+
+            <p>
+                Simulate food handling conditions and
+                identify possible risks caused by
+                cross-contamination, unsafe handling
+                and poor pest control.
+            </p>
+
+            <button
+                type="button"
+                class="practical-btn"
+                id="practical2Btn"
+            >
+                Start Practical 2
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PRACTICAL 1 FORM
+     ========================================= -->
+
+<section
+    class="practical-form-section"
+    id="practical1Section"
+    style="display: none;"
+>
+
+    <div class="section-header">
+
+        <h2>Practical 1: Basic Food Hygiene</h2>
+
+        <p>
+            Select the conditions that represent the
+            simulated food hygiene environment.
+        </p>
+
+    </div>
+
+
+    <form id="practical1Form">
+
+        <!-- Temperature -->
+
+        <div class="simulation-control">
+
+            <label for="p1Temperature">
+                🌡️ Food Storage Temperature
+            </label>
+
+            <select id="p1Temperature" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="safe">
+                    Safe temperature
+                </option>
+
+                <option value="moderate">
+                    Moderate temperature
+                </option>
+
+                <option value="unsafe">
+                    Unsafe temperature
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Hand Hygiene -->
+
+        <div class="simulation-control">
+
+            <label for="p1HandHygiene">
+                🧼 Hand Hygiene
+            </label>
+
+            <select id="p1HandHygiene" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="good">
+                    Good hand hygiene
+                </option>
+
+                <option value="moderate">
+                    Moderate hand hygiene
+                </option>
+
+                <option value="poor">
+                    Poor hand hygiene
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Cleaning -->
+
+        <div class="simulation-control">
+
+            <label for="p1Cleaning">
+                🧹 Cleaning and Sanitation
+            </label>
+
+            <select id="p1Cleaning" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="good">
+                    Good cleaning
+                </option>
+
+                <option value="moderate">
+                    Moderate cleaning
+                </option>
+
+                <option value="poor">
+                    Poor cleaning
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Water -->
+
+        <div class="simulation-control">
+
+            <label for="p1Water">
+                💧 Water Quality
+            </label>
+
+            <select id="p1Water" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="safe">
+                    Safe water
+                </option>
+
+                <option value="moderate">
+                    Moderate water quality
+                </option>
+
+                <option value="unsafe">
+                    Unsafe water
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Waste -->
+
+        <div class="simulation-control">
+
+            <label for="p1Waste">
+                🗑️ Waste Management
+            </label>
+
+            <select id="p1Waste" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="good">
+                    Good waste management
+                </option>
+
+                <option value="moderate">
+                    Moderate waste management
+                </option>
+
+                <option value="poor">
+                    Poor waste management
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="simulation-actions">
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Run Practical 1
+            </button>
+
+            <button
+                type="button"
+                class="secondary-btn"
+                id="cancelPractical1"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+<!-- =========================================
+     PRACTICAL 2 FORM
+     ========================================= -->
+
+<section
+    class="practical-form-section"
+    id="practical2Section"
+    style="display: none;"
+>
+
+    <div class="section-header">
+
+        <h2>
+            Practical 2: Food Handling & Contamination
+        </h2>
+
+        <p>
+            Select the conditions that represent the
+            food handling environment.
+        </p>
+
+    </div>
+
+
+    <form id="practical2Form">
+
+        <!-- Cross Contamination -->
+
+        <div class="simulation-control">
+
+            <label for="p2CrossContamination">
+                ⚠️ Cross-Contamination
+            </label>
+
+            <select
+                id="p2CrossContamination"
+                required
+            >
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="low">
+                    Low risk
+                </option>
+
+                <option value="moderate">
+                    Moderate risk
+                </option>
+
+                <option value="high">
+                    High risk
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Food Handling -->
+
+        <div class="simulation-control">
+
+            <label for="p2FoodHandling">
+                🍱 Food Handling
+            </label>
+
+            <select id="p2FoodHandling" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="safe">
+                    Safe food handling
+                </option>
+
+                <option value="moderate">
+                    Moderate food handling
+                </option>
+
+                <option value="unsafe">
+                    Unsafe food handling
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Pest Control -->
+
+        <div class="simulation-control">
+
+            <label for="p2PestControl">
+                🐜 Pest Control
+            </label>
+
+            <select id="p2PestControl" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="good">
+                    Good pest control
+                </option>
+
+                <option value="moderate">
+                    Moderate pest control
+                </option>
+
+                <option value="poor">
+                    Poor pest control
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Temperature -->
+
+        <div class="simulation-control">
+
+            <label for="p2Temperature">
+                🌡️ Food Temperature
+            </label>
+
+            <select id="p2Temperature" required>
+
+                <option value="">
+                    -- Select Condition --
+                </option>
+
+                <option value="safe">
+                    Safe temperature
+                </option>
+
+                <option value="moderate">
+                    Moderate temperature
+                </option>
+
+                <option value="unsafe">
+                    Unsafe temperature
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="simulation-actions">
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Run Practical 2
+            </button>
+
+            <button
+                type="button"
+                class="secondary-btn"
+                id="cancelPractical2"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+
+        <!-- =========================================
+             FOOTER
+             ========================================= -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 Food Hygiene Management System
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <!-- General/shared JavaScript -->
+    <script src="script.js"></script>
+    <script src="simulete.js"></script>
+
+
+</body>
+
+</html>
