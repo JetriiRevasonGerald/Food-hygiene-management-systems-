@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hygiene - Results</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+        <div class="logo-icon">🍽️</div>
+            <h1>Food Hygiene System</h1>
+            <p>Management System</p>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-link">🏠 Dashboard</a>
+            <a href="assessment.html" class="nav-link">📝 Assessment</a>
+            <a href="simulation.html" class="nav-link">🧪 Simulation</a>
+            <a href="results.html" class="nav-link active">📊 Results</a>
+            <a href="reports.html" class="nav-link">📄 Reports</a>
+            <a href="profile.html" class="nav-link">👤 Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+        </div>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!--<section class="results-header">
+            <h2>Food Hygiene Simulation Results</h2>
+            <p>
+                Review your food hygiene simulation performance and
+                recommended actions.
+            </p>
+        </section>-->
+        <header class="top-bar">
+
+            <div>
+            <h2>Food Hygiene Simulation Results</h2>
+            <p>
+                Review your food hygiene simulation performance and
+                recommended actions.
+            </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>Food Hygiene Officer</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Overall Score -->
+        <section class="score-card">
+
+            <h3>Overall Hygiene Score</h3>
+
+            <div class="score-circle">
+                <span id="score">0%</span>
+            </div>
+
+            <h3 id="performance">No Result Available</h3>
+
+            <p id="scoreMessage">
+                Complete the simulation to see your results.
+            </p>
+
+        </section>
+
+
+        <!-- Result Summary -->
+        <section class="summary-section">
+
+            <h3>Simulation Summary</h3>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <h4>Total Questions</h4>
+                    <p id="totalQuestions">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h4>Correct Answers</h4>
+                    <p id="correctAnswers">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h4>Incorrect Answers</h4>
+                    <p id="incorrectAnswers">0</p>
+                </div>
+
+                <div class="summary-card">
+                    <h4>Contamination Risk</h4>
+                    <p id="riskLevel">Unknown</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Hygiene Areas -->
+        <section class="hygiene-section">
+
+            <h3>Hygiene Area Performance</h3>
+
+            <div class="hygiene-grid">
+
+                <div class="hygiene-card">
+                    <h4>Personal Hygiene</h4>
+                    <p id="personalHygiene">0%</p>
+                </div>
+
+                <div class="hygiene-card">
+                    <h4>Food Handling</h4>
+                    <p id="foodHandling">0%</p>
+                </div>
+
+                <div class="hygiene-card">
+                    <h4>Food Storage</h4>
+                    <p id="foodStorage">0%</p>
+                </div>
+
+                <div class="hygiene-card">
+                    <h4>Cleaning & Sanitation</h4>
+                    <p id="cleaning">0%</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recommendations -->
+        <section class="recommendation-section">
+
+            <h3>Recommendations</h3>
+
+            <div id="recommendations">
+
+                <p>
+                    Complete the simulation to receive food hygiene
+                    recommendations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Action Buttons -->
+        <section class="result-actions">
+
+            <button id="retryBtn">
+                Take Simulation Again
+            </button>
+
+            <button id="assessmentBtn">
+                Go to Assessment
+            </button>
+
+            <button id="dashboardBtn">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    
+
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+
+        <p>
+            &copy; 2026 Food Hygiene Management System.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
