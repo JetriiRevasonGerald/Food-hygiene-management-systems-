@@ -1,0 +1,152 @@
+/* =========================================
+   PRACTICAL SELECTION
+   ========================================= */
+
+.practical-selection {
+    background: #ffffff;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.practical-selection > h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1b5e20;
+}
+
+
+/* =========================================
+   PRACTICAL GRID
+   ========================================= */
+
+.practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================
+   PRACTICAL CARD
+   ========================================= */
+
+.practical-card {
+    background: #f8faf8;
+    border: 1px solid #dfe8df;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.practical-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.practical-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.practical-card h3 {
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.practical-card h4 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.practical-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PRACTICAL BUTTON
+   ========================================= */
+
+.practical-btn {
+    border: none;
+    background: #2e7d32;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.practical-btn:hover {
+    background: #1b5e20;
+}
+
+
+/* =========================================
+   PRACTICAL FORM
+   ========================================= */
+
+.practical-form-section {
+    background: #ffffff;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.practical-form-section .section-header {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+   ========================================= */
+
+.simulation-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.secondary-btn {
+    border: none;
+    background: #757575;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #555;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .practical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practical-selection,
+    .practical-form-section {
+        padding: 20px;
+    }
+
+    .simulation-actions {
+        flex-direction: column;
+    }
+
+}
