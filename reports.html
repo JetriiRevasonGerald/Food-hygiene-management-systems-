@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hygiene - Reports</title>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+        <div class="logo-icon">🍽️</div>
+            <h1>Food Hygiene System</h1>
+            <p>Management System</p>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-link">🏠 Dashboard</a>
+            <a href="assessment.html" class="nav-link">📝 Assessment</a>
+            <a href="simulation.html" class="nav-link">🧪 Simulation</a>
+            <a href="results.html" class="nav-link">📊 Results</a>
+            <a href="reports.html" class="nav-link active">📄 Reports</a>
+            <a href="profile.html" class="nav-link">👤 Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+        </div>
+    </aside>
+
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =====================================
+             REPORT HEADER
+             ===================================== -->
+
+           <header class="top-bar">
+
+            <div>
+                 <h2>
+                Food Hygiene Reports
+            </h2>
+
+            <p>
+                View and summarize food hygiene assessment
+                and simulation results.
+            </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <span>👤</span>
+
+                <div>
+
+                    <strong>Administrator</strong>
+
+                    <small>Food Hygiene Officer</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             REPORT INFORMATION
+             ===================================== -->
+
+        <section class="report-information">
+
+            <h3>
+                Report Information
+            </h3>
+
+
+            <div class="report-info-grid">
+
+
+                <div class="info-card">
+
+                    <h4>
+                        Report Type
+                    </h4>
+
+                    <p id="reportType">
+                        Food Hygiene Assessment & Simulation
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h4>
+                        Generated Date
+                    </h4>
+
+                    <p id="reportDate">
+                        --
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h4>
+                        User
+                    </h4>
+
+                    <p id="reportUser">
+                        Administrator
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h4>
+                        System
+                    </h4>
+
+                    <p>
+                        Food Hygiene Management System
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             OVERALL PERFORMANCE
+             ===================================== -->
+
+        <section class="report-performance">
+
+            <h3>
+                Overall Hygiene Performance
+            </h3>
+
+
+            <div class="performance-grid">
+
+
+                <!-- Hygiene Score -->
+
+                <div class="performance-card">
+
+                    <h4>
+                        Hygiene Score
+                    </h4>
+
+                    <strong id="reportScore">
+                        0%
+                    </strong>
+
+                    <p>
+                        Overall food hygiene performance
+                    </p>
+
+                </div>
+
+
+
+                <!-- Performance -->
+
+                <div class="performance-card">
+
+                    <h4>
+                        Performance Level
+                    </h4>
+
+                    <strong id="reportPerformance">
+                        No Result
+                    </strong>
+
+                    <p>
+                        Overall performance classification
+                    </p>
+
+                </div>
+
+
+
+                <!-- Risk Level -->
+
+                <div class="performance-card">
+
+                    <h4>
+                        Contamination Risk
+                    </h4>
+
+                    <strong id="reportRisk">
+                        Unknown
+                    </strong>
+
+                    <p>
+                        Simulated food safety risk
+                    </p>
+
+                </div>
+
+
+
+                <!-- Risk Score -->
+
+                <div class="performance-card">
+
+                    <h4>
+                        Risk Score
+                    </h4>
+
+                    <strong id="reportRiskScore">
+                        0
+                    </strong>
+
+                    <p>
+                        Calculated simulation risk score
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ASSESSMENT SUMMARY
+             ===================================== -->
+
+        <section class="assessment-report">
+
+            <h3>
+                Assessment Summary
+            </h3>
+
+
+            <div class="assessment-grid">
+
+
+                <div class="assessment-card">
+
+                    <h4>
+                        Total Questions
+                    </h4>
+
+                    <p id="reportTotalQuestions">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="assessment-card">
+
+                    <h4>
+                        Correct Answers
+                    </h4>
+
+                    <p id="reportCorrectAnswers">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="assessment-card">
+
+                    <h4>
+                        Incorrect Answers
+                    </h4>
+
+                    <p id="reportIncorrectAnswers">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="assessment-card">
+
+                    <h4>
+                        Assessment Status
+                    </h4>
+
+                    <p id="assessmentStatus">
+                        Not Completed
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             HYGIENE AREA PERFORMANCE
+             ===================================== -->
+
+        <section class="hygiene-report">
+
+            <h3>
+                Hygiene Area Performance
+            </h3>
+
+
+            <div class="hygiene-report-grid">
+
+
+                <!-- Personal Hygiene -->
+
+                <div class="hygiene-report-card">
+
+                    <h4>
+                        Personal Hygiene
+                    </h4>
+
+                    <strong id="reportPersonalHygiene">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Food Handling -->
+
+                <div class="hygiene-report-card">
+
+                    <h4>
+                        Food Handling
+                    </h4>
+
+                    <strong id="reportFoodHandling">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Food Storage -->
+
+                <div class="hygiene-report-card">
+
+                    <h4>
+                        Food Storage
+                    </h4>
+
+                    <strong id="reportFoodStorage">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Cleaning -->
+
+                <div class="hygiene-report-card">
+
+                    <h4>
+                        Cleaning & Sanitation
+                    </h4>
+
+                    <strong id="reportCleaning">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RISK FACTORS
+             ===================================== -->
+
+        <section class="report-risk-factors">
+
+            <h3>
+                Identified Risk Factors
+            </h3>
+
+
+            <ul id="reportRiskFactors">
+
+                <li>
+                    No simulation risk factors available.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RECOMMENDATIONS
+             ===================================== -->
+
+        <section class="report-recommendations">
+
+            <h3>
+                Recommended Actions
+            </h3>
+
+
+            <div id="reportRecommendations">
+
+                <p>
+                    Complete the assessment or simulation
+                    to receive recommendations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             REPORT SUMMARY
+             ===================================== -->
+
+        <section class="final-report-summary">
+
+            <h3>
+                Report Summary
+            </h3>
+
+
+            <p id="finalReportSummary">
+
+                No report has been generated yet.
+                Complete the food hygiene assessment
+                and simulation to generate a report.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             REPORT ACTIONS
+             ===================================== -->
+
+        <section class="report-actions">
+
+            <button id="generateReportBtn">
+
+                📄 Generate Report
+
+            </button>
+
+
+            <button id="printReportBtn">
+
+                🖨️ Print Report
+
+            </button>
+
+
+            <button id="dashboardBtn">
+
+                🏠 Back to Dashboard
+
+            </button>
+
+        </section>
+
+       <footer class="dashboard-footer">
+
+        <p>
+
+            &copy; 2026 Food Hygiene Management System.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+    </main>
+
+   
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <!-- Shared JavaScript -->
+    <script src="script.js"></script>
+    <script src="reports.js"></script>
+
+
+</body>
+
+</html>
