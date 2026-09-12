@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Food Hygiene - Profile</title>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Profile Page CSS -->
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+        <div class="logo-icon">🍽️</div>
+            <h1>Food Hygiene System</h1>
+            <p>Management System</p>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="nav-link">🏠 Dashboard</a>
+            <a href="assessment.html" class="nav-link">📝 Assessment</a>
+            <a href="simulation.html" class="nav-link">🧪 Simulation</a>
+            <a href="results.html" class="nav-link">📊 Results</a>
+            <a href="reports.html" class="nav-link">📄 Reports</a>
+            <a href="profile.html" class="nav-link active">👤 Profile</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+        </div>
+    </aside>
+
+
+        <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+        <main class="main-content">
+
+
+        <!-- =====================================
+             PROFILE HEADER
+             ===================================== -->
+
+        <section class="profile-header">
+
+            <div class="profile-avatar">
+
+                <span>👤</span>
+
+            </div>
+
+
+            <div class="profile-title">
+
+                <h2 id="profileName">
+                    Administrator
+                </h2>
+
+                <p id="profileRole">
+                    Food Hygiene Officer
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PERSONAL INFORMATION
+             ===================================== -->
+
+        <section class="profile-section">
+
+            <div class="section-title">
+
+                <h3>
+                    Personal Information
+                </h3>
+
+                <p>
+                    View and manage your profile information.
+                </p>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+
+                <!-- Full Name -->
+
+                <div class="profile-field">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        value="Administrator"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- Username -->
+
+                <div class="profile-field">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        value="admin"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="profile-field">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        value="admin@foodhygiene.com"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- Phone -->
+
+                <div class="profile-field">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        value="+255 000 000 000"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- Role -->
+
+                <div class="profile-field">
+
+                    <label for="role">
+                        Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        value="Food Hygiene Officer"
+                        readonly
+                    >
+
+                </div>
+
+
+
+                <!-- Account Status -->
+
+                <div class="profile-field">
+
+                    <label for="accountStatus">
+                        Account Status
+                    </label>
+
+                    <input
+                        type="text"
+                        id="accountStatus"
+                        value="Active"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Edit Buttons -->
+
+            <div class="profile-actions">
+
+                <button
+                    type="button"
+                    id="editProfileBtn"
+                >
+                    ✏️ Edit Profile
+                </button>
+
+                <button
+                    type="button"
+                    id="saveProfileBtn"
+                    style="display: none;"
+                >
+                    💾 Save Changes
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelProfileBtn"
+                    style="display: none;"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ACCOUNT INFORMATION
+             ===================================== -->
+
+        <section class="profile-section">
+
+            <div class="section-title">
+
+                <h3>
+                    Account Information
+                </h3>
+
+            </div>
+
+
+            <div class="account-grid">
+
+
+                <div class="account-card">
+
+                    <span class="account-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Account Created
+                        </h4>
+
+                        <p id="accountCreated">
+                            2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="account-card">
+
+                    <span class="account-icon">
+                        🔐
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Account Security
+                        </h4>
+
+                        <p>
+                            Password Protected
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="account-card">
+
+                    <span class="account-icon">
+                        🟢
+                    </span>
+
+                    <div>
+
+                        <h4>
+                            Account Status
+                        </h4>
+
+                        <p>
+                            Active
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SYSTEM ACTIVITY
+             ===================================== -->
+
+        <section class="profile-section">
+
+            <div class="section-title">
+
+                <h3>
+                    System Activity
+                </h3>
+
+                <p>
+                    Summary of your activity in the system.
+                </p>
+
+            </div>
+
+
+            <div class="activity-grid">
+
+
+                <div class="activity-card">
+
+                    <h4>
+                        Assessments Completed
+                    </h4>
+
+                    <strong id="assessmentCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <h4>
+                        Simulations Completed
+                    </h4>
+
+                    <strong id="simulationCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <h4>
+                        Reports Generated
+                    </h4>
+
+                    <strong id="reportCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SECURITY
+             ===================================== -->
+
+        <section class="profile-section">
+
+            <div class="section-title">
+
+                <h3>
+                    Security
+                </h3>
+
+                <p>
+                    Manage your account security.
+                </p>
+
+            </div>
+
+
+            <div class="security-actions">
+
+                <button
+                    type="button"
+                    id="changePasswordBtn"
+                >
+                    🔑 Change Password
+                </button>
+
+
+                <button
+                    type="button"
+                    id="logoutProfileBtn"
+                >
+                    🚪 Logout
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PASSWORD FORM
+             ===================================== -->
+
+        <section
+            id="passwordSection"
+            class="password-section"
+            style="display: none;"
+        >
+
+            <h3>
+                Change Password
+            </h3>
+
+
+            <form id="passwordForm">
+
+
+                <div class="password-field">
+
+                    <label for="currentPassword">
+                        Current Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="password-field">
+
+                    <label for="newPassword">
+                        New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="password-field">
+
+                    <label for="confirmPassword">
+                        Confirm New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="password-actions">
+
+                    <button type="submit">
+                        Save Password
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelPasswordBtn"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FOOTER MESSAGE
+             ===================================== -->
+
+        <section class="profile-note">
+
+            <p>
+                Your profile information is used to identify
+                your activity within the Food Hygiene Management
+                System.
+            </p>
+
+        </section>
+
+         <footer class="dashboard-footer">
+
+        <p>
+
+            &copy; 2026 Food Hygiene Management System.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <!-- Shared JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Profile JavaScript -->
+    <script src="profile.js"></script>
+
+
+</body>
+
+</html>
